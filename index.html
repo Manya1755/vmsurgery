@@ -23,19 +23,22 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 100px 0;
+            padding: 80px 0;
+        }
+        /* Фикс для мобильного меню и отступов */
+        max-width: 768px {
+            .section-slide { padding: 60px 0; }
         }
     </style>
 </head>
 <body class="bg-white text-slate-900 leading-relaxed">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="text-xl font-black tracking-tighter text-cyan-600 uppercase italic">VM_Surgery</span>
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
+            <span class="text-lg md:text-xl font-black tracking-tighter text-cyan-600 uppercase italic">VM_Surgery</span>
             <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
                 <a href="#about" class="hover:text-cyan-600 transition">Главная</a>
                 <a href="#practice" class="hover:text-cyan-600 transition">Опыт</a>
-                <a href="#specialization" class="hover:text-cyan-600 transition">Хирургия</a>
                 <a href="#science" class="hover:text-cyan-600 transition">Наука</a>
                 <a href="#price" class="hover:text-cyan-600 transition">Стоимость</a>
             </div>
@@ -43,22 +46,22 @@
     </nav>
 
     <section id="about" class="section-slide">
-        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-            <div class="md:w-3/5 text-left">
-                <p class="text-cyan-600 font-black uppercase tracking-[0.3em] mb-4 text-sm">Врач сердечно-сосудистый хирург</p>
-                <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tighter mb-8 text-slate-900 uppercase italic">
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
+            <div class="md:w-3/5 text-left order-2 md:order-1">
+                <p class="text-cyan-600 font-black uppercase tracking-[0.3em] mb-4 text-xs md:text-sm">Врач сердечно-сосудистый хирург</p>
+                <h1 class="text-4xl md:text-7xl font-black leading-tight tracking-tighter mb-6 md:mb-8 text-slate-900 uppercase italic">
                     Матусевич 
 Вячеслав 
 Викторович
                 </h1>
-                <div class="h-2 w-24 bg-cyan-500 mb-8"></div>
-                <p class="text-2xl md:text-3xl font-bold italic text-slate-400 max-w-xl">
+                <div class="h-2 w-20 md:w-24 bg-cyan-500 mb-6 md:mb-8"></div>
+                <p class="text-xl md:text-3xl font-bold italic text-slate-400 max-w-xl">
                     Экспертная хирургия артерий и вен.
                 </p>
             </div>
-            <div class="md:w-1/3 flex justify-center">
-                <div class="relative p-2 bg-cyan-500/10 rounded-[3rem]">
-                    <img src="doctor-portrait.jpg" class="rounded-[2.5rem] shadow-2xl w-full max-w-sm object-cover aspect-[3/4] border-4 border-white" alt="Матусевич В.В.">
+            <div class="md:w-1/3 flex justify-center order-1 md:order-2">
+                <div class="relative p-1.5 bg-cyan-500/10 rounded-[2.5rem] md:rounded-[3rem]">
+                    <img src="doctor-portrait.jpg" class="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl w-full max-w-[280px] md:max-w-sm object-cover aspect-[3/4] border-4 border-white" alt="Матусевич В.В.">
                 </div>
             </div>
         </div>
@@ -66,20 +69,20 @@
 
     <section id="practice" class="section-slide bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 w-full">
-            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-20 text-center">Опыт и мастерство</h2>
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <div class="bg-white p-6 rounded-[3rem] shadow-sm">
-                    <img src="microscope-shot.jpg" class="w-full aspect-video object-cover img-reveal rounded-[2rem]" alt="Микроскоп">
-                    <p class="mt-6 text-xl font-bold uppercase italic text-center">Микрохирургическая техника</p>
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-16 text-center">Опыт и мастерство</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
+                <div class="bg-white p-5 md:p-6 rounded-[2.5rem] md:rounded-[3rem] shadow-sm">
+                    <img src="microscope-shot.jpg" class="w-full aspect-video object-cover img-reveal rounded-[1.5rem] md:rounded-[2rem]" alt="Микроскоп">
+                    <p class="mt-6 text-lg font-bold uppercase italic text-center tracking-tight">Микрохирургическая техника</p>
                 </div>
-                <div class="bg-white p-6 rounded-[3rem] shadow-sm text-right">
-                    <img src="хирургическая бригада.jpg" class="w-full aspect-video object-cover img-reveal rounded-[2rem]" alt="Операция">
-                    <p class="mt-6 text-xl font-bold uppercase italic text-center">Сложные оперативные вмешательства</p>
+                <div class="bg-white p-5 md:p-6 rounded-[2.5rem] md:rounded-[3rem] shadow-sm">
+
+
+<img src="%D1%85%D0%B8%D1%80%D1%80%D1%83%D1%80%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B1%D1%80%D0%B8%D0%B3%D0%B0%D0%B4%D0%B0.jpg" class="w-full aspect-video object-cover img-reveal rounded-[1.5rem] md:rounded-[2rem]" alt="Операция">
+                    <p class="mt-6 text-lg font-bold uppercase italic text-center tracking-tight text-right">Сложные вмешательства</p>
                 </div>
             </div>
-
-
-<div class="max-w-4xl mx-auto p-12 bg-white rounded-[4rem] shadow-xl border border-cyan-500/10 text-center italic text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
+            <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white rounded-[2.5rem] md:rounded-[4rem] shadow-xl border border-cyan-500/10 text-center italic text-lg md:text-2xl text-slate-600 font-medium leading-relaxed">
                 «Непрерывная клиническая практика позволяет проводить операции максимально быстро и точно, обеспечивая пациентам комфортные условия и короткие сроки реабилитации».
             </div>
         </div>
@@ -87,21 +90,19 @@
 
     <section id="specialization" class="section-slide bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6 w-full text-center">
-            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-24">Хирургия артерий и вен</h2>
-            <div class="grid md:grid-cols-2 gap-12 text-left">
-                <div class="p-16 bg-white/5 rounded-[4rem] border border-white/10 hover:bg-cyan-500/10 transition">
-                    <div class="text-6xl mb-8">🩺</div>
-                    <h4 class="text-4xl font-black uppercase mb-8 italic text-cyan-400">Артерии</h4>
-                    <ul class="text-slate-400 text-xl space-y-4 font-medium italic leading-relaxed">
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-20 md:mb-24">Хирургия артерий и вен</h2>
+            <div class="grid md:grid-cols-2 gap-10 md:gap-12 text-left">
+                <div class="p-10 md:p-16 bg-white/5 rounded-[3rem] md:rounded-[4rem] border border-white/10 hover:bg-cyan-500/10 transition">
+                    <div class="text-6xl mb-8">❤️</div> <h4 class="text-3xl font-black uppercase mb-6 italic text-cyan-400">Артерии</h4>
+                    <ul class="text-slate-400 text-lg space-y-3 font-medium italic leading-relaxed">
                         <li>— Реконструкция сонных артерий (КЭЭ)</li>
                         <li>— Аорто-подвздошный сегмент</li>
                         <li>— Бедренно-подколенный сегмент</li>
                     </ul>
                 </div>
-                <div class="p-16 bg-white/5 rounded-[4rem] border border-white/10 hover:bg-cyan-500/10 transition">
-                    <div class="text-6xl mb-8">💉</div>
-                    <h4 class="text-4xl font-black uppercase mb-8 italic text-cyan-400">Вены</h4>
-                    <p class="text-slate-400 text-xl leading-relaxed italic">
+                <div class="p-10 md:p-16 bg-white/5 rounded-[3rem] md:rounded-[4rem] border border-white/10 hover:bg-cyan-500/10 transition">
+                    <div class="text-6xl mb-8">🩸</div> <h4 class="text-3xl font-black uppercase mb-6 italic text-cyan-400">Вены</h4>
+                    <p class="text-slate-400 text-lg leading-relaxed italic">
                         Эндовенозная лазерная коагуляция варикоза (ЭВЛК), склеротерапия и эстетическая флебология экспертного уровня.
                     </p>
                 </div>
@@ -109,41 +110,44 @@
         </div>
     </section>
 
-    <section id="science" class="section-slide bg-white text-slate-900">
+    <section id="science" class="section-slide bg-white">
         <div class="max-w-7xl mx-auto px-6 w-full">
-            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-20 text-center">Научная работа</h2>
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-16 text-center text-slate-900">Научная работа</h2>
+            
             <p class="max-w-3xl mx-auto text-center text-xl text-slate-400 italic mb-20 leading-relaxed font-medium">
-                Интеграция фундаментальной науки в клиническую практику — это фундамент квалификации хирурга. Исследовательская деятельность позволяет совершенствовать технику в операционной.
+                Интеграция фундаментальной науки в клиническую практику — это фундамент квалификации хирурга.
             </p>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-slate-50 p-16 rounded-[4rem] border-l-[24px] border-cyan-500 shadow-xl flex items-start gap-8 transition hover:-translate-y-4 duration-500">
-                    <span class="text-5xl">📜</span>
-                    <div>
-                        <h3 class="text-3xl font-black uppercase mb-4 tracking-tighter italic">Патенты</h3>
-                        <p class="text-cyan-600 font-black mb-4 uppercase text-xs tracking-widest italic">№ 2026104XXX</p>
-                        <p class="text-2xl font-bold italic leading-snug text-slate-800">«Способ каротидной эндартерэктомии с оригинальной методикой пластики».</p>
-                    </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 md:gap-10">
+                <div class="bg-slate-50 p-10 md:p-16 rounded-[3rem] md:rounded-[4rem] border-l-[16px] md:border-l-[24px] border-cyan-500 shadow-xl">
+                    <h3 class="text-3xl font-black uppercase mb-8 tracking-tighter italic">Патенты</h3>
+                    <ul class="space-y-6">
+                        <li class="group">
+                            <p class="text-cyan-600 font-black mb-1 uppercase text-xs tracking-widest italic">№ 2026104XXX</p>
+                            <a href="#" class="text-xl font-bold italic text-slate-800 hover:text-cyan-600 transition underline underline-offset-4">«Способ каротидной эндартерэктомии...»</a>
+                        </li>
+                        </ul>
                 </div>
-                <div class="bg-slate-50 p-16 rounded-[4rem] border-l-[24px] border-slate-900 shadow-xl flex items-start gap-8 transition hover:-translate-y-4 duration-500">
-                    <span class="text-5xl">✍️</span>
-                    <div>
-                        <h3 class="text-3xl font-black uppercase mb-4 tracking-tighter italic">Статьи</h3>
-                        <p class="text-slate-400 font-black mb-4 uppercase text-xs tracking-widest italic">PubMed / ВАК</p>
-                        <p class="text-2xl font-bold italic leading-snug text-slate-800">«Анализ результатов лечения патологической извитости сонных артерий».</p>
-                    </div>
+                <div class="bg-slate-50 p-10 md:p-16 rounded-[3rem] md:rounded-[4rem] border-l-[16px] md:border-l-[24px] border-slate-900 shadow-xl">
+                    <h3 class="text-3xl font-black uppercase mb-8 tracking-tighter italic">Статьи</h3>
+                    <ul class="space-y-6">
+                        <li class="
+
+
+group">
+                            <p class="text-slate-400 font-black mb-1 uppercase text-xs tracking-widest italic">PubMed / ВАК</p>
+                            <a href="#" class="text-xl font-bold italic text-slate-800 hover:text-cyan-600 transition underline underline-offset-4">«Анализ результатов лечения...»</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="reviews" class="py-24 bg-cyan-600 text-white">
-        <div class="ma
-
-
-x-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-10">Отзывы</h2>
-            <p class="text-2xl mb-16 font-medium italic opacity-90 leading-relaxed">Доверие пациентов — мой главный приоритет. Ознакомьтесь с реальными историями на ПроДокторов.</p>
-            <a href="https://prodoctorov.ru/" target="_blank" class="inline-flex items-center gap-6 bg-white text-cyan-600 px-16 py-8 rounded-[2.5rem] font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition duration-300">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-10">Отзывы</h2>
+            <a href="https://prodoctorov.ru/" target="_blank" class="inline-flex items-center gap-6 bg-white text-cyan-600 px-10 py-6 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition">
                 <span class="text-3xl">⭐</span> Читать на ПроДокторов
             </a>
         </div>
@@ -151,32 +155,20 @@ x-w-4xl mx-auto px-6 text-center">
 
     <section id="price" class="section-slide bg-slate-50">
         <div class="max-w-5xl mx-auto px-6 w-full">
-            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-20 text-center">Стоимость услуг</h2>
-            <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100">
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-20 text-center text-slate-900">Стоимость услуг</h2>
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
                 <table class="w-full text-left">
                     <thead>
-                        <tr class="bg-slate-900 text-white text-[12px] font-black uppercase tracking-[0.5em]">
-                            <th class="px-12 py-12">Услуга</th>
-                            <th class="px-12 py-12 text-right">Цена</th>
+                        <tr class="bg-slate-900 text-white text-[10px] md:text-[12px] font-black uppercase tracking-[0.4em]">
+                            <th class="px-8 md:px-12 py-8 md:py-10">Услуга</th>
+                            <th class="px-8 md:px-12 py-8 md:py-10 text-right">Цена</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-100 font-bold text-2xl italic">
-                        <tr>
-                            <td class="px-12 py-10">Консультация (ККБ №1 / GT)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600">3 500 ₽</td>
-                        </tr>
-                        <tr>
-                            <td class="px-12 py-10">ЭВЛК (1 нога)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600">от 45 000 ₽</td>
-                        </tr>
-                        <tr>
-                            <td class="px-12 py-10">ЭВЛК (2 ноги)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600">от 80 000 ₽</td>
-                        </tr>
-                        <tr>
-                            <td class="px-12 py-10">Склеротерапия</td>
-                            <td class="px-12 py-10 text-right text-cyan-600">от 5 000 ₽</td>
-                        </tr>
+                    <tbody class="divide-y divide-slate-100 font-bold text-lg md:text-2xl italic">
+                        <tr><td class="px-8 md:px-12 py-8">Консультация (ККБ №1 / GT)</td><td class="px-8 md:px-12 py-8 text-right text-cyan-600">3 500 ₽</td></tr>
+                        <tr><td class="px-8 md:px-12 py-8">ЭВЛК (1 нога)</td><td class="px-8 md:px-12 py-8 text-right text-cyan-600">от 45 000 ₽</td></tr>
+                        <tr><td class="px-8 md:px-12 py-8">ЭВЛК (2 ноги)</td><td class="px-8 md:px-12 py-8 text-right text-cyan-600">от 80 000 ₽</td></tr>
+                        <tr><td class="px-8 md:px-12 py-8">Склеротерапия</td><td class="px-8 md:px-12 py-8 text-right text-cyan-600">от 5 000 ₽</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -184,37 +176,27 @@ x-w-4xl mx-auto px-6 text-center">
     </section>
 
     <section id="locations" class="section-slide bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 w-full items-center">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 w-full items-center">
             <div>
-                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16 italic">Локации</h2>
-                <div class="space-y-16 mb-24">
-                    <div class="border-l-[24px] border-cyan-500 pl-10">
-                        <h4 class="text-3xl font-black uppercase mb-2 tracking-tighter italic">ККБ №1</h4>
-                        <p class="text-slate-500 text-2xl font-medium italic leading-relaxed">г. Краснодар, ул. 1-го Мая, 167.</p>
-                    </div>
-                    <div class="border-l-[24px] border-slate-900 pl-10">
-                        <h4 class="text-3xl font-black uppercase mb-2 tracking-tighter italic">GT Клиника</h4>
-                        <p class="text-slate-500 text-2xl font-medium italic leading-relaxed">г. Краснодар, ул. Рашпилевская.</p>
-                    </div>
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-12">Локации</h2>
+                <div class="space-y-12 mb-20">
+                    <div class="border-l-[16px] border-cyan-500 pl-8"><h4 class="text-2xl font-black uppercase mb-1 italic">ККБ №1</h4><p class="text-slate-500 text-xl font-medium">Краснодар, ул. 1-го Мая, 167.</p></div>
+                    <div class="border-l-[16px] border-slate-900 pl-8"><h4 class="text-2xl font-black uppercase mb-1 italic text-slate-800">GT Клиника</h4><p class="text-slate-500 text-xl font-medium">Краснодар, ул. Рашпилевская.</p></div>
                 </div>
-                <a href="https://prodoctorov.ru/" target="_blank" class="inline-block bg-cyan-600 text-white px-20 py-10 rounded-[3rem] font-black uppercase tracking-[0.3em] shadow-2xl hover:scale-105 active:scale-95 transition duration-300">
-                    Записаться
-                </a>
+                <a href="https://prodoctorov.ru/" target="_blank" class="block text-center bg-cyan-600 text-white px-12 py-8 rounded-[2.5rem] font-black uppercase tracking-[0.3em] shadow-2xl hover:scale-105 active:scale-95 transition">Записаться</a>
             </div>
-            <div id="map" class="h-[650px] rounded-[5rem] shadow-2xl border-[12px] border-slate-50 overflow-hidden"></div>
+            <div id="map" class="h-[500px] md:h-[600px] rounded-[4rem] shadow-2xl border-[12px] border-slate-50 overflow-hidden"></div>
         </div>
     </section>
 
-    <footer class="py-20 text-center text-slate-400 text-[10px] font-black uppercase trackin
+    <footer class="py-20 text-center text-slate-400 text-[10px] font-black uppercase tracking-[1em]">© 2026 Vyacheslav Matusevich</footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></s
 Ограничение доступа
 r.prodoctorov.ru
 
 
-g-[1em]">
-        © 2026 Vyacheslav Matusevich
-    </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+cript>
     <script>
         var map = L.map('map').setView([45.045, 38.985], 12);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -223,3 +205,7 @@ g-[1em]">
     </script>
 </body>
 </html>
+
+
+
+
