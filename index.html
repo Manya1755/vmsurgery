@@ -1,127 +1,141 @@
-> Кирилл:
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вячеслав Викторович Матусевич | Сосудистая хирургия</title>
+    <title>Матусевич Вячеслав Викторович | Сосудистая хирургия</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            scroll-behavior: smooth; 
-        }
-
-        /* Эффект: из ЧБ в Цвет */
-        .img-transition {
+        /* Из ЧБ в Цвет */
+        .img-reveal {
             filter: grayscale(100%);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .img-transition:hover {
+        .img-reveal:hover {
             filter: grayscale(0%);
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
-        /* Слайдовая структура */
-        .slide-section {
+        /* Полноэкранные слайды */
+        .section-slide {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 100px 0;
-            position: relative;
+            align-items: center;
+            padding: 80px 0;
         }
 
-        /* Оверлей для первого слайда */
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 20%, rgba(15, 23, 42, 0.4) 100%);
+        /* Оверлей для фото за столом */
+        .hero-bg {
+            background: linear-gradient(90deg, rgba(2, 6, 23, 0.95) 30%, rgba(2, 6, 23, 0.2) 100%), 
+                        url('doctor-portrait.jpg');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
+<body class="bg-slate-950 text-white selection:bg-cyan-500 selection:text-white">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="text-2xl font-black tracking-tighter text-cyan-600 uppercase italic">VM_Surgery</span>
-            <div class="hidden md:flex space-x-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
-                <a href="#hero" class="hover:text-cyan-600 transition">Главная</a>
-                <a href="#gallery" class="hover:text-cyan-600 transition">Практика</a>
-                <a href="#science" class="hover:text-cyan-600 transition">Наука</a>
-                <a href="#price" class="hover:text-cyan-600 transition">Прайс</a>
-                <a href="#locations" class="hover:text-cyan-600 transition">Контакты</a>
-            </div>
-        </div>
-    </nav>
-
-    <section id="hero" class="slide-section relative bg-slate-900 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="doctor-portrait.jpg" class="w-full h-full object-cover object-center" alt="Матусевич В.В.">
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-6xl md:text-9xl font-black leading-none tracking-tighter mb-8 italic uppercase">
+    <section id="hero" class="section-slide hero-bg">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <h1 class="text-6xl md:text-9xl font-black italic leading-none tracking-tighter mb-8">
                 МАТУСЕВИЧ <br>ВЯЧЕСЛАВ <br>ВИКТОРОВИЧ
             </h1>
-            <div class="h-4 w-48 bg-cyan-500 mb-10"></div>
-            <p class="text-2xl md:text-4xl text-slate-200 max-w-3xl font-light italic">
-                Сосудистый хирург. Экспертная реконструктивная хирургия аорты и сонных артерий.
+            <div class="h-4 w-40 bg-cyan-500 mb-10"></div>
+            <p class="text-2xl md:text-4xl font-light italic text-slate-300 max-w-2xl">
+                Сосудистый хирург. Экспертная реконструкция артерий и лазерная флебология.
             </p>
         </div>
     </section>
 
-    <section id="gallery" class="slide-section bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-20">
-                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic mb-4">Постоянное развитие</h2>
-                <p class="text-cyan-600 font-black uppercase tracking-[0.4em] text-sm italic">Сложные случаи • Современные технологии</p>
-            </div>
-            
+    <section id="gallery" class="section-slide bg-white text-slate-900">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-20">Постоянное развитие</h2>
             <div class="grid md:grid-cols-2 gap-16">
-                <div class="group">
-                    <div class="rounded-[3rem] overflow-hidden shadow-2xl bg-slate-100 border border-slate-200">
-                        <img src="microscope-shot.jpg" class="w-full aspect-video object-cover img-transition" alt="Микрохирургия">
+                <div class="group cursor-crosshair">
+                    <div class="rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="microscope-shot.jpg" class="w-full aspect-video object-cover img-reveal" alt="Microscope">
                     </div>
-                    <div class="mt-8">
+                    <p class="mt-8 text-2xl font-bold uppercase italic tracking-tighter">Микрохирургическая техника</p>
+                </div>
+                <div class="group cursor-crosshair text-right">
+                    <div class="rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="хирургическая бригада.jpg" class="w-full aspect-video object-cover img-reveal" alt="Team">
+                    </div>
+                    <p class="mt-8 text-2xl font-bold uppercase italic tracking-tighter">Сложные оперативные вмешательства</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-> Кирилл:
-<h3 class="text-4xl font-black uppercase mb-6 tracking-tighter">Публикации</h3>
-                    <p class="text-slate-400 font-black mb-4 uppercase tracking-[0.2em] text-xs">ВАК / PUBMED / АНГИОЛОГИЯ</p>
-                    <p class="text-2xl font-medium text-slate-800 italic leading-snug">
-                        «Анализ результатов хирургического лечения патологической извитости сонных артерий».
+    <section id="specialization" class="section-slide bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-24 text-center">Хирургия артерий и вен</h2>
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="p-12 bg-white/5 rounded-[4rem] border border-white/10 transition hover:bg-cyan-500/10">
+                    <h4 class="text-4xl font-black uppercase mb-6 text-cyan-400">01. Артерии</h4>
+                    <p class="text-slate-400 text-xl leading-relaxed">
+                        Каротидная эндартерэктомия (КЭЭ), пластика аорты, реконструкция подвздошных и бедренных сегментов.
+                    </p>
+                </div>
+                <div class="p-12 bg-white/5 rounded-[4rem] border border-white/10 transition hover:bg-cyan-500/10">
+<h4 class="text-4xl font-black uppercase mb-6 text-cyan-400">02. Вены</h4>
+                    <p class="text-slate-300 text-xl leading-relaxed">
+                        ЭВЛК (лазерное лечение варикоза), склеротерапия и миниинвазивная флебэктомия по стандартам эстетической медицины.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="price" class="slide-section bg-slate-50">
+    <section id="science" class="section-slide bg-white text-slate-900">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-20">Научная работа</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-slate-50 p-16 rounded-[4rem] border-l-[20px] border-cyan-500 shadow-xl transition hover:-translate-y-4">
+                    <h3 class="text-4xl font-black uppercase mb-8 tracking-tighter">Патенты</h3>
+                    <p class="text-cyan-600 font-black mb-4 uppercase text-xs tracking-[0.3em]">ФИПС / Регистрация 2026</p>
+                    <p class="text-2xl font-medium italic leading-snug text-slate-800">
+                        «Оригинальный способ реконструкции сонной артерии при выполнении эндартерэктомии».
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-16 rounded-[4rem] border-l-[20px] border-slate-900 shadow-xl transition hover:-translate-y-4">
+                    <h3 class="text-4xl font-black uppercase mb-8 tracking-tighter">Статьи</h3>
+                    <p class="text-slate-400 font-black mb-4 uppercase text-xs tracking-[0.3em]">Ангиология и сосудистая хирургия</p>
+                    <p class="text-2xl font-medium italic leading-snug text-slate-800">
+                        «Сравнительный анализ техник хирургического лечения патологической извитости сонных артерий».
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="price" class="section-slide bg-slate-950">
         <div class="max-w-5xl mx-auto px-6 w-full">
-            <h2 class="text-5: md:text-7xl font-black uppercase tracking-tighter mb-20 italic text-center">Стоимость</h2>
-            
-            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-200">
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-20 text-center">Прайс</h2>
+            <div class="overflow-hidden rounded-[3rem] border border-white/10">
                 <table class="w-full text-left">
-                    <thead>
-                        <tr class="bg-slate-900 text-white text-[12px] font-black uppercase tracking-[0.4em]">
+                    <thead class="bg-white text-slate-900 text-[10px] font-black uppercase tracking-[0.5em]">
+                        <tr>
                             <th class="px-12 py-10">Медицинская услуга</th>
-                            <th class="px-12 py-10 text-right">Ориентировочно</th>
+                            <th class="px-12 py-10 text-right">Стоимость</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-100 font-bold text-2xl">
+                    <tbody class="divide-y divide-white/5 text-2xl font-bold">
                         <tr>
-                            <td class="px-12 py-10">Консультация (ККБ №1 / GT)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600 italic">3 500 ₽</td>
+                            <td class="px-12 py-10">Консультация эксперта (ККБ №1 / GT)</td>
+                            <td class="px-12 py-10 text-right text-cyan-400 italic">3 500 ₽</td>
                         </tr>
                         <tr>
-                            <td class="px-12 py-10">ЭВЛК (Лазерное лечение вен)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600 italic">от 45 000 ₽</td>
+                            <td class="px-12 py-10">ЭВЛК (Лазерное лечение варикоза)</td>
+                            <td class="px-12 py-10 text-right text-cyan-400 italic text-lg uppercase">от 45 000 ₽</td>
                         </tr>
                         <tr>
-                            <td class="px-12 py-10 italic opacity-50">Сложные реконструкции (КЭЭ, Аорта)</td>
-                            <td class="px-12 py-10 text-right text-cyan-600 uppercase text-sm">По согласованию</td>
+                            <td class="px-12 py-10 opacity-30 italic">Сложные реконструкции (КЭЭ, Аорта)</td>
+                            <td class="px-12 py-10 text-right text-sm font-black uppercase">По запросу</td>
                         </tr>
                     </tbody>
                 </table>
@@ -129,38 +143,36 @@
         </div>
     </section>
 
-    <section id="locations" class="slide-section bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <section id="locations" class="section-slide bg-white text-slate-900">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 w-full">
             <div>
-                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16 italic">Локации</h2>
+                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12 italic">Локации</h2>
                 <div class="space-y-12">
-                    <div class="border-l-[16px] border-cyan-500 pl-10">
-                        <h4 class="text-4xl font-black uppercase mb-2 tracking-tighter">ККБ №1</h4>
-                        <p class="text-slate-500 text-2xl font-medium leading-relaxed">г. Краснодар, ул. 1-го Мая, 167. <br>База сосудистой хирургии.</p>
+                    <div class="border-l-[20px] border-cyan-500 pl-10">
+<h4 class="text-3xl font-black uppercase tracking-tighter">ККБ №1</h4>
+                        <p class="text-slate-500 text-2xl">Краснодар, ул. 1-го Мая, 167.</p>
                     </div>
-                    <div class="border-l-[16px] border-slate-900 pl-10">
-                        <h4 class="text-4xl font-black uppercase mb-2 tracking-tighter">GT Клиника</h4>
-                        <p class="text-slate-500 text-2xl font-medium leading-relaxed">г. Краснодар, ул. Рашпилевская. <br>Амбулаторный прием.</p>
+                    <div class="border-l-[20px] border-slate-900 pl-10">
+                        <h4 class="text-3xl font-black uppercase tracking-tighter">GT Клиника</h4>
+                        <p class="text-slate-500 text-2xl">Краснодар, ул. Рашпилевская.</p>
                     </div>
                 </div>
-                
                 <div class="mt-24">
-                    <h3 class="text-2xl font-black uppercase mb-6 italic tracking-tight">Связь с доктором:</h3>
-                    <a href="https://prodoctorov.ru/" target="_blank" class="inline-block bg-cyan-600 text-white px-16 py-8 rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-2xl hover:bg-cyan-500 transition-transform active:scale-95">
+                    <h3 class="text-xl font-black uppercase mb-6 italic text-slate-400">Связь с доктором:</h3>
+                    <a href="https://prodoctorov.ru/" target="_blank" class="inline-block bg-cyan-600 text-white px-16 py-8 rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-2xl hover:scale-105 active:scale-95 transition duration-300">
                         Записаться на прием
                     </a>
                 </div>
             </div>
-            <div id="map" class="h-[650px] rounded-[4rem] shadow-2xl border-4 border-white overflow-hidden"></div>
+            <div id="map" class="h-[600px] rounded-[4rem] shadow-2xl border-[10px] border-slate-50 overflow-hidden"></div>
         </div>
     </section>
 
-    <footer class="py-20 text-center text-slate-400 text-[11px] font-black uppercase tracking-[1em]">
-        © 2026 Vyacheslav Matusevich
+    <footer class="py-20 text-center text-slate-500 text-[10px] font-black uppercase tracking-[1em] border-t border-slate-100">
+        © 2026 VM_SURGERY | Вячеслав Викторович Матусевич
     </footer>
 
-> Кирилл:
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         var map = L.map('map').setView([45.045, 38.985], 12);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -169,3 +181,8 @@
     </script>
 </body>
 </html>
+prodoctorov.ru
+ПроДокторов – сайт отзывов пациентов о врачах №1 в России
+
+Крупнейший сайт отзывов о врачах и клиниках России. Более четырёх миллионов честных отзывов пациентов. Поделитесь своим мнением о лечении - внесите вклад в народный рейти...
+
