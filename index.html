@@ -4,25 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Доктор Матусевич — сосудистый хирург</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Настройка кастомных цветов -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0057ff",
+            lightbg: "#f5f7ff"
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body class="bg-white text-gray-900 font-sans">
 
 <!-- ========================= -->
 <!-- 1. ГЛАВНЫЙ ЭКРАН -->
 <!-- ========================= -->
 
-<section id="hero">
-  <div class="hero-text">
-    <h1>Матусевич Вячеслав Викторович</h1>
-    <p>Сосудистый хирург. Ежедневная практика, современные методики, точная диагностика.</p>
-    <a href="#contacts" class="button">Записаться на консультацию</a>
+<section id="hero" class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+  
+  <div class="flex-1">
+    <h1 class="text-4xl font-bold mb-4">Матусевич Вячеслав Викторович</h1>
+    <p class="text-lg mb-6">Сосудистый хирург. Ежедневная практика, современные методики, точная диагностика.</p>
+    <a href="#contacts" class="inline-block bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 transition">
+      Записаться на консультацию
+    </a>
   </div>
 
-  <div class="hero-photo">
-    <img src="hero.jpg" alt="Доктор Матусевич">
+  <div class="flex-1">
+    <img src="hero.jpg" class="rounded-2xl w-full object-cover" alt="Доктор Матусевич">
   </div>
+
 </section>
 
 
@@ -31,15 +51,17 @@
 <!-- 2. ОБО МНЕ -->
 <!-- ========================= -->
 
-<section id="about">
-  <div class="about-text">
-    <h2>Обо мне</h2>
-    <p>Сосудистый хирург, специализирующийся на лечении заболеваний вен и артерий. Провожу диагностику, консультирование и оперативное лечение. Регулярно участвую в медицинских конгрессах, повышаю квалификацию и внедряю современные методики в практику.</p>
+<section id="about" class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+
+  <div class="flex-1">
+    <h2 class="text-3xl font-bold mb-4">Обо мне</h2>
+    <p class="text-lg">Сосудистый хирург, специализирующийся на лечении заболеваний вен и артерий. Провожу диагностику, консультирование и оперативное лечение. Регулярно участвую в медицинских конгрессах, повышаю квалификацию и внедряю современные методики в практику.</p>
   </div>
 
-  <div class="about-photo">
-    <img src="about.jpg" alt="Доктор Матусевич">
+  <div class="flex-1">
+    <img src="about.jpg" class="rounded-2xl w-full object-cover" alt="Доктор Матусевич">
   </div>
+
 </section>
 
 
@@ -48,15 +70,17 @@
 <!-- 3. ОБРАЗОВАНИЕ И НАУКА -->
 <!-- ========================= -->
 
-<section id="education">
-  <h2>Образование и научная деятельность</h2>
+<section id="education" class="max-w-6xl mx-auto px-6 py-20">
 
-  <div class="edu-photos">
-    <img src="edu-operating.jpg" alt="В операционной">
-    <img src="edu-conference.jpg" alt="Доклад на конференции">
+  <h2 class="text-3xl font-bold mb-8">Образование и научная деятельность</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <img src="edu-operating.jpg" class="rounded-xl w-full object-cover" alt="В операционной">
+    <img src="edu-conference.jpg" class="rounded-xl w-full object-cover" alt="Доклад на конференции">
   </div>
 
-  <p>Окончил Кубанский государственный медицинский университет. Прохожу регулярные курсы повышения квалификации, участвую в российских и международных конференциях, занимаюсь научной деятельностью в области сосудистой хирургии.</p>
+  <p class="text-lg">Окончил Кубанский государственный медицинский университет. Прохожу регулярные курсы повышения квалификации, участвую в российских и международных конференциях, занимаюсь научной деятельностью в области сосудистой хирургии.</p>
+
 </section>
 
 
@@ -65,25 +89,29 @@
 <!-- 4. ПОКАЗАНИЯ / УСЛУГИ -->
 <!-- ========================= -->
 
-<section id="services">
-  <h2>Показания</h2>
+<section id="services" class="max-w-6xl mx-auto px-6 py-20">
 
-  <div class="columns">
-    <div class="column">
-      <h3>Заболевания вен</h3>
+  <h2 class="text-3xl font-bold mb-10">Показания</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-lightbg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-3">Заболевания вен</h3>
       <p>Варикозная болезнь, тромбофлебит, сосудистые сетки, хроническая венозная недостаточность.</p>
     </div>
 
-    <div class="column">
-      <h3>Заболевания артерий</h3>
+    <div class="bg-lightbg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-3">Заболевания артерий</h3>
       <p>Атеросклероз, ишемия конечностей, стенозы, нарушение кровотока.</p>
     </div>
 
-    <div class="column">
-      <h3>Диагностика</h3>
+    <div class="bg-lightbg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-3">Диагностика</h3>
       <p>УЗИ вен и артерий, консультация, подбор оптимального метода лечения.</p>
     </div>
+
   </div>
+
 </section>
 
 
@@ -92,70 +120,74 @@
 <!-- 5. ОТЗЫВЫ -->
 <!-- ========================= -->
 
-<section id="reviews">
-  <h2>Отзывы</h2>
-  <p class="intro">Отзывы пациентов — важная часть моей работы. Благодарю за доверие и обратную связь.</p>
+<section id="reviews" class="max-w-6xl mx-auto px-6 py-20">
 
-  <div class="review-cards">
+  <h2 class="text-3xl font-bold mb-6">Отзывы</h2>
+  <p class="text-lg mb-10">Отзывы пациентов — важная часть моей работы. Благодарю за доверие и обратную связь.</p>
 
-    <div class="card">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200">
       <strong>Анонимно</strong><br>★★★★★
-      <p>Обратилась с выраженным варикозом. Доктор всё объяснил, провёл ЭВЛК — восстановление прошло быстро.</p>
-      <span>12.03.2024</span>
+      <p class="mt-3">Обратилась с выраженным варикозом. Доктор всё объяснил, провёл ЭВЛК — восстановление прошло быстро.</p>
+      <span class="text-sm opacity-70">12.03.2024</span>
     </div>
 
-    <div class="card">
+    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200">
       <strong>Анонимно</strong><br>★★★★★
-      <p>Компетентный, спокойный, уверенный хирург. Делал флебэктомию — результат отличный.</p>
-      <span>05.02.2024</span>
+      <p class="mt-3">Компетентный, спокойный, уверенный хирург. Делал флебэктомию — результат отличный.</p>
+      <span class="text-sm opacity-70">05.02.2024</span>
     </div>
 
-    <div class="card">
+    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200">
       <strong>Анонимно</strong><br>★★★★★
-      <p>Профессионал своего дела. На консультации всё рассказал, показал на УЗИ.</p>
-      <span>21.01.2024</span>
+      <p class="mt-3">Профессионал своего дела. На консультации всё рассказал, показал на УЗИ.</p>
+      <span class="text-sm opacity-70">21.01.2024</span>
     </div>
 
   </div>
 
-  <a href="https://prodoctorov.ru/krasnodar/vrach/XXXXXX-matusevich/" class="button">Смотреть все отзывы на ПроДокторов</a>
+  <a href="https://prodoctorov.ru/krasnodar/vrach/XXXXXX-matusevich/" class="inline-block mt-10 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 transition">
+    Смотреть все отзывы на ПроДокторов
+  </a>
+
 </section>
 
 
 
 <!-- ========================= -->
-<!-- 6. КОНТАКТЫ И ЛОКАЦИИ -->
+<!-- 6. КОНТАКТЫ -->
 <!-- ========================= -->
 
-<section id="contacts">
-  <h2>Контакты и локации клиник</h2>
-  <p class="intro">Выберите удобную клинику для консультации или операции.</p>
+<section id="contacts" class="max-w-6xl mx-auto px-6 py-20">
 
-  <div class="clinics">
+  <h2 class="text-3xl font-bold mb-6">Контакты и локации клиник</h2>
+  <p class="text-lg mb-10">Выберите удобную клинику для консультации или операции.</p>
 
-    <div class="clinic">
-      <h3>GT Медицина Краснодар</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+
+    <div class="bg-lightbg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-3">GT Медицина Краснодар</h3>
       <p>г. Краснодар, ул. Рашпилевская, 179<br>Пн–Пт 09:00–18:00<br>Телефон: 8 929 847‑17‑43</p>
-
-      <iframe src="https://maps.google.com/maps?q=Краснодар%20Рашпилевская%20179&output=embed"></iframe>
+      <iframe src="https://maps.google.com/maps?q=Краснодар%20Рашпилевская%20179&output=embed" class="w-full h-56 rounded-lg mt-4"></iframe>
     </div>
 
-    <div class="clinic">
-      <h3>ГБУЗ «Первая краевая клиническая больница»</h3>
+    <div class="bg-lightbg p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-3">ГБУЗ «Первая краевая клиническая больница»</h3>
       <p>г. Краснодар, ул. 1 Мая, 167<br>Пн–Сб 10:00–17:00<br>Телефон: 8 929 847‑17‑43</p>
-
-      <iframe src="https://maps.google.com/maps?q=Краснодар%201%20Мая%20167&output=embed"></iframe>
+      <iframe src="https://maps.google.com/maps?q=Краснодар%201%20Мая%20167&output=embed" class="w-full h-56 rounded-lg mt-4"></iframe>
     </div>
 
   </div>
 
-  <div class="contact-links">
-    <a href="https://wa.me/79298471743">WhatsApp</a>
-    <a href="https://t.me/79298471743">Telegram</a>
-    <a href="https://maks.app/79298471743">МАКС</a>
-    <a href="tel:+79298471743">Позвонить</a>
-    <a href="mailto:dr.matusevich@mail.ru">dr.matusevich@mail.ru</a>
+  <div class="flex flex-wrap gap-4">
+    <a href="https://wa.me/79298471743" class="bg-primary text-white px-5 py-3 rounded-xl font-semibold">WhatsApp</a>
+    <a href="https://t.me/79298471743" class="bg-primary text-white px-5 py-3 rounded-xl font-semibold">Telegram</a>
+    <a href="https://maks.app/79298471743" class="bg-primary text-white px-5 py-3 rounded-xl font-semibold">МАКС</a>
+    <a href="tel:+79298471743" class="bg-primary text-white px-5 py-3 rounded-xl font-semibold">Позвонить</a>
+    <a href="mailto:dr.matusevich@mail.ru" class="bg-primary text-white px-5 py-3 rounded-xl font-semibold">Email</a>
   </div>
+
 </section>
 
 </body>
