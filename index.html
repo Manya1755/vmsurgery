@@ -1,136 +1,142 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Доктор Матусевич — сосудистый хирург</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Inter", "sans-serif"] },
-          colors: { primary: "#0057ff" },
-        },
-      },
-    };
-  </script>
-  <style>
-    body { background-attachment: fixed; }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.45);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матусевич Вячеслав Викторович | Сосудистый хирург</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fbfbfd; color: #1d1d1f; scroll-behavior: smooth; }
+        .apple-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .text-blue { color: #0071e3; }
+        .bg-blue { background-color: #0071e3; }
+        .card-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .img-medical { filter: grayscale(100%); transition: filter 0.5s ease; }
+        .img-medical:hover { filter: grayscale(0%); }
+        .gradient-text { background: linear-gradient(180deg, #1d1d1f 0%, #434344 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-
-<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-slate-200 text-slate-800 font-sans">
-
-<header class="backdrop-blur-xl bg-white/40 border-b border-white/50 sticky top-0 z-50">
-  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="text-xl font-bold tracking-tighter text-slate-900 uppercase">Dr. Matusevich</div>
-    <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest text-slate-600">
-      <a href="#hero" class="hover:text-primary transition">Обо мне</a>
-      <a href="#services" class="hover:text-primary transition">Показания</a>
-      <a href="#locations" class="hover:text-primary transition">Локации</a>
-      <a href="#contacts" class="text-primary font-bold">Записаться</a>
-    </div>
-  </nav>
-</header>
-
-<section id="hero" class="max-w-6xl mx-auto px-6 py-20 lg:py-32 flex flex-col md:flex-row items-center gap-16">
-  <div class="flex-1">
-    <span class="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Краснодар • Сосудистая хирургия</span>
-    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tighter">
-      Матусевич <br>Вячеслав
-    </h1>
-    <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-md italic font-medium">
-      Современные методики, научный подход и патентованные технологии лечения.
-    </p>
-    <a href="#contacts" class="inline-block bg-primary text-white px-10 py-5 rounded-2xl font-bold shadow-2xl shadow-blue-200 hover:scale-105 transition duration-300">
-      Записаться на консультацию
-    </a>
-  </div>
-
-  <div class="flex-1 relative">
-    <div class="absolute -inset-4 bg-blue-400/10 rounded-[3rem] blur-3xl"></div>
-    <img src="doctor-portrait.jpg" class="relative rounded-[2.5rem] shadow-2xl border-[10px] border-white w-full object-cover aspect-[4/5]" alt="Доктор Матусевич">
-  </div>
-</section>
-
-<section id="education" class="max-w-6xl mx-auto px-6 py-20">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="glass-card p-8 rounded-[2rem] shadow-xl">
-      <div class="text-3xl mb-4">🎓</div>
-      <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">КубГМУ</h3>
-      <p class="text-slate-500 text-sm leading-relaxed">Высшее образование и ординатура по профилю сосудистой хирургии.</p>
-    </div>
-    <div class="glass-card p-8 rounded-[2rem] shadow-xl">
-      <div class="text-3xl mb-4">🔬</div>
-      <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Наука</h3>
-      <p class="text-slate-500 text-sm leading-relaxed">Автор 30+ научных статей и патентов в области коррекции венозного рефлюкса.</p>
-    </div>
-    <div class="glass-card p-8 rounded-[2rem] shadow-xl">
-      <div class="text-3xl mb-4">📡</div>
-      <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">УЗИ</h3>
-      <p class="text-slate-500 text-sm leading-relaxed">Профессиональная диагностика вен и артерий на экспертном уровне.</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="max-w-6xl mx-auto px-6 py-24">
-  <h2 class="text-4xl font-bold text-slate-900 mb-16 text-center tracking-tight">Направления лечения</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">                                                              <div class="group cursor-default">
-      <div class="h-1 w-12 bg-primary mb-6 group-hover:w-20 transition-all duration-300"></div>
-      <h3 class="text-xl font-bold mb-4 italic">Заболевания вен</h3>
-      <p class="text-slate-500 leading-relaxed">Варикоз, тромбофлебит, ХВН. Миниинвазивные операции без разрезов.</p>
-    </div>
-    <div class="group cursor-default">
-      <div class="h-1 w-12 bg-primary mb-6 group-hover:w-20 transition-all duration-300"></div>
-      <h3 class="text-xl font-bold mb-4 italic">Заболевания артерий</h3>
-      <p class="text-slate-500 leading-relaxed">Атеросклероз, стенозы сонных артерий, профилактика инсультов.</p>
-    </div>
-    <div class="group cursor-default">
-      <div class="h-1 w-12 bg-primary mb-6 group-hover:w-20 transition-all duration-300"></div>
-      <h3 class="text-xl font-bold mb-4 italic">Диагностика</h3>
-      <p class="text-slate-500 leading-relaxed">Полный цикл: от УЗ-сканирования до подбора тактики лечения.</p>
-    </div>
-  </div>
-</section>
-
-<section id="locations" class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-10 tracking-tight">Где проходит прием</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="glass-card p-8 rounded-[2.5rem] shadow-lg">
-      <h3 class="text-xl font-bold mb-2">GT Медицина</h3>
-      <p class="text-slate-500 mb-4 font-medium italic text-sm">ул. Рашпилевская, 179</p>
-      <div class="aspect-video bg-slate-200 rounded-2xl overflow-hidden grayscale">
-         <div class="w-full h-full flex items-center justify-center text-slate-400 text-xs italic uppercase tracking-widest">Map View</div>
-      </div>
-    </div>
-    <div class="glass-card p-8 rounded-[2.5rem] shadow-lg">
-      <h3 class="text-xl font-bold mb-2">ККБ №1</h3>
-      <p class="text-slate-500 mb-4 font-medium italic text-sm">ул. 1 Мая, 167</p>
-      <div class="aspect-video bg-slate-200 rounded-2xl overflow-hidden grayscale">
-         <div class="w-full h-full flex items-center justify-center text-slate-400 text-xs italic uppercase tracking-widest">Map View</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contacts" class="max-w-6xl mx-auto px-6 py-32 text-center">
-  <div class="inline-block glass-card p-12 lg:p-20 rounded-[4rem] shadow-2xl border-white relative overflow-hidden">
-    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Связаться напрямую</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <a href="https://wa.me/79298471743" class="bg-[#25D366] text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg shadow-green-200">WhatsApp</a>
-      <a href="https://t.me/79298471743" class="bg-[#0088cc] text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg shadow-blue-200">Telegram</a>
-    </div>
-    <p class="mt-12 text-slate-400 text-sm font-medium uppercase tracking-[0.3em]">Dr. Matusevich V.V.</p>
-  </div>
-</section>
-
+<body class="antialiased">
+    <nav class="sticky top-0 z-50 apple-glass border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-semibold tracking-tight text-lg">В.В. Матусевич</span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-blue transition">Об авторе</a>
+                <a href="#science" class="hover:text-blue transition">Наука</a>
+                <a href="#prices" class="hover:text-blue transition">Стоимость</a>
+                <a href="#contacts" class="hover:text-blue transition">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-8 text-center md:text-left">
+            <p class="uppercase tracking-widest text-xs font-bold text-gray-400">Высокие стандарты сосудистой хирургии</p>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight gradient-text">Матусевич<br>Вячеслав Викторович</h1>
+            <p class="text-xl text-gray-500 max-w-md mx-auto md:mx-0">Помощь экспертного уровня для пациентов любого возраста.</p>
+            <a href="#contacts" class="inline-block bg-blue text-white px-10 py-4 rounded-full font-semibold hover:bg-blue-600 transition shadow-lg shadow-blue-200">Записаться на прием</a>
+        </div>
+        <div class="flex-1 w-full max-w-md">
+            <img src="hero.jpg" alt="Матусевич В.В." class="rounded-[2.5rem] shadow-2xl w-full object-cover aspect-[4/5]">
+        </div>
+    </section><section id="about" class="bg-white py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-blue font-semibold mb-2 uppercase tracking-tight">Фундаментальные знания</p>
+            <h2 class="text-4xl font-bold mb-6">Путь в профессии <span class="text-blue">и квалификация</span></h2>
+            <p class="text-gray-500 max-w-3xl mx-auto text-lg leading-relaxed">От академической базы КубГМУ до узкой специализации. Постоянное обучение — мой залог безопасности и предсказуемого результата.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="card-shadow p-5 bg-gray-50 rounded-3xl border border-gray-100">
+                    <img src="edu-1.jpg" class="rounded-2xl mb-4 img-medical w-full aspect-[3/4] object-cover shadow-sm">
+                    <p class="font-bold text-gray-800">Базовое образование</p><p class="text-xs text-gray-500 mt-1">КубГМУ</p>
+                </div>
+                <div class="card-shadow p-5 bg-gray-50 rounded-3xl border border-gray-100">
+                    <img src="edu-2.jpg" class="rounded-2xl mb-4 img-medical w-full aspect-[3/4] object-cover shadow-sm">
+                    <p class="font-bold text-gray-800">Ординатура</p><p class="text-xs text-gray-500 mt-1">ССХ</p>
+                </div>
+                <div class="card-shadow p-5 bg-gray-50 rounded-3xl border border-gray-100">
+                    <img src="edu-3.jpg" class="rounded-2xl mb-4 img-medical w-full aspect-[3/4] object-cover shadow-sm">
+                    <p class="font-bold text-gray-800">УЗ-диагностика</p><p class="text-xs text-gray-500 mt-1">Проф. переподготовка</p>
+                </div>
+                <div class="card-shadow p-5 bg-gray-50 rounded-3xl border border-gray-100">
+                    <img src="edu-4.jpg" class="rounded-2xl mb-4 img-medical w-full aspect-[3/4] object-cover shadow-sm">
+                    <p class="font-bold text-gray-800">Допуск к ССХ</p><p class="text-xs text-gray-500 mt-1">Аккредитация</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="science" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue font-semibold mb-2 uppercase tracking-tight">Инновации в хирургии</p>
+                <h2 class="text-4xl font-bold">Наука <span class="text-blue">и практика</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Автор более 30 научных работ. Уникальные способы лечения патологий артерий и вен.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="flex gap-5 p-6 bg-white rounded-3xl card-shadow border border-gray-100 items-center">
+                    <img src="patent-1.jpg" class="w-20 h-28 object-cover rounded-lg shadow-md flex-shrink-0">
+                    <p class="text-sm font-semibold">Способ реконструкции бифуркации сонных артерий при протяженном поражении ВСА</p>
+                </div>
+                <div class="flex gap-5 p-6 bg-white rounded-3xl card-shadow border border-gray-100 items-center">
+                    <img src="patent-2.jpg" class="w-20 h-28 object-cover rounded-lg shadow-md flex-shrink-0">
+                    <p class="text-sm font-semibold">Профилактика периферических неврологических осложнений при КЭЭ</p>
+                </div>
+                <div class="flex gap-5 p-6 bg-white rounded-3xl card-shadow border border-gray-100 items-center">
+                    <img src="patent-3.jpg" class="w-20 h-28 object-cover rounded-lg shadow-md flex-shrink-0">
+                    <p class="text-sm font-semibold">Лечение недостаточности нижних конечностей при аневризме аорты 3B по Дебейки</p>
+                </div>
+                <div class="flex gap-5 p-6 bg-white rounded-3xl card-shadow border border-gray-100 items-center">
+                    <img src="patent-4.jpg" class="w-20 h-28 object-cover rounded-lg shadow-md flex-shrink-0"><p class="text-sm font-semibold">Способ лечения хронической сосудисто-мозговой недостаточности</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <img src="work-1.jpg" class="rounded-[2rem] shadow-xl img-medical w-full aspect-video object-cover">
+                <img src="conf-1.jpg" class="rounded-[2rem] shadow-xl img-medical w-full aspect-video object-cover">
+            </div>
+        </div>
+    </section><section id="prices" class="bg-white py-24 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Направления <span class="text-blue">и стоимость</span></h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-[2rem] bg-blue/5 border border-blue-100">
+                    <h3 class="text-2xl font-bold mb-4">Диагностика</h3>
+                    <div class="flex justify-between py-2 border-b border-blue-100 mb-4">
+                        <span class="font-medium">Прием + УЗИ</span><span class="font-bold text-blue">от 5 000 ₽</span>
+                    </div>
+                    <p class="text-xs text-blue/60 italic leading-relaxed text-center">Скрининг системы и постановка диагноза за один визит.</p>
+                </div>
+                <div class="p-8 rounded-[2rem] bg-gray-50 border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4">Вены</h3>
+                    <div class="space-y-4 text-sm font-semibold">
+                        <div class="flex justify-between border-b pb-2"><span>ЭВЛК (1н/2н)</span><span>60к / 100к+ ₽</span></div>
+                        <div class="flex justify-between border-b pb-2"><span>Классика (1н/2н)</span><span>40к / 80к ₽</span></div>
+                        <div class="flex justify-between"><span>Склеротерапия</span><span>от 15 000 ₽</span></div>
+                    </div>
+                </div>
+                <div class="p-8 rounded-[2rem] bg-gray-900 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Артерии</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">Реконструктивные операции на сонных артериях, аорте и нижних конечностях.</p>
+                    <p class="text-lg font-semibold pt-4 border-t border-gray-800">Индивидуально</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts" class="bg-gray-50 py-24">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-center lg:text-left">
+            <div class="space-y-8">
+                <h2 class="text-5xl font-bold">Где <span class="text-blue">принять решение?</span></h2>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/79298471743" class="bg-white px-8 py-5 rounded-2xl shadow-sm font-bold border border-gray-100">WhatsApp</a>
+                    <a href="https://t.me/+79298471743" class="bg-black text-white px-8 py-5 rounded-2xl shadow-xl font-bold">Telegram</a>
+                </div>
+            </div>
+            <div class="rounded-[2.5rem] overflow-hidden shadow-2xl h-[450px] border-8 border-white bg-gray-200">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=38.974572%2C45.035470&z=12" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="py-12 bg-white text-center text-[10px] text-gray-400 uppercase tracking-widest">
+        © 2026 Матусевич В.В. | Имеются противопоказания. Требуется консультация.
+    </footer>
 </body>
-</html>                                             
+</html>
